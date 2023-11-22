@@ -21,6 +21,14 @@ class _QuoteListState extends State<QuoteList> {
     Quote(text: "Success has many fathers but failure has none", author: "Peter Diyouh"),
     Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
     Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
   ];
 
   Widget quoteTemplate(quote){
