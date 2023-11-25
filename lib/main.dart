@@ -3,7 +3,7 @@ import 'qoute.dart';
 import 'quote_card.dart';
 
 void main() {
-  runApp( MaterialApp(
+  runApp( const MaterialApp(
     home: QuoteList(),
   ));
 }
@@ -37,14 +37,14 @@ class _QuoteListState extends State<QuoteList> {
   ];
 
   Widget quoteTemplate(quote){
-      return new QuoteCard(quote: quote);
+      return QuoteCard(quote: quote);
   }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Text("Awesome Quotes App",
+        title: const Text("Awesome Quotes App",
             style: TextStyle(
             color: Colors.black,
             fontSize: 18.0,
@@ -55,11 +55,15 @@ class _QuoteListState extends State<QuoteList> {
         backgroundColor: Colors.red,
       ),
 
-      body: Column(
-        children: quotes.map((quote) {
-          return quoteTemplate(quote);
-        }).toList(),
-      ),
+      body: ListView(
+        children: [
+          Column(
+            children: quotes.map((quote) {
+              return quoteTemplate(quote);
+            }).toList(),
+          ),
+        ],
+      )
     );
   }
 }

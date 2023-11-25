@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'qoute.dart';
 
 void main() {
-  runApp( MaterialApp(
+  runApp( const MaterialApp(
     home: QuoteList(),
   ));
 }
@@ -33,22 +33,22 @@ class _QuoteListState extends State<QuoteList> {
 
   Widget quoteTemplate(quote){
     return Card(
-      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
+      margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(quote.text,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18.0,
                 color: Colors.black87,
               ),
             ),
-            SizedBox(height: 6.0),
+            const SizedBox(height: 6.0),
 
             Text(quote.author,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18.0,
                 color: Colors.black87,
               ),
@@ -63,7 +63,7 @@ class _QuoteListState extends State<QuoteList> {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Text("Awesome Quotes App",
+        title: const Text("Awesome Quotes App",
           style: TextStyle(
             color: Colors.black,
             fontSize: 18.0,
