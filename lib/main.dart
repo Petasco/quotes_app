@@ -18,22 +18,23 @@ class QuoteList extends StatefulWidget {
 class _QuoteListState extends State<QuoteList> {
 
   List<Quote> quotes = [
-    Quote(text: "Be yourself, everyone is already taken", author: "Oscar Wild"),
-    Quote(text: "Success has many fathers but failure has none", author: "Peter Diyouh"),
+    Quote(text: "It is so sad that you need have sense to know what is sensible", author: "Petasco"),
+    Quote(text: "Life is like riding a bicycle. To keep your balance, you must keep moving.", author: "Albert Einstein"),
+    Quote(text: "If I cannot do great things, I can do small things in a great way.", author: "Martin Luther King, Jr"),
+    Quote(text: "If you see someone without a smile, give 'em yours!", author: "Dolly Parton"),
+    Quote(text: "If you cannot do great things, do small things in a great way", author: "Napoleon Hill"),
+    Quote(text: "Know the difference between enjoying your youth and destroying your future", author: "Nelson Mandela"),
+    Quote(text: "The secret to getting ahead is getting started", author: "Mark Twain"),
+    Quote(text: "Wealth is not about having a lot of money; it’s about having a lot of options", author: "Chris Rock"),
+    Quote(text: "Money is a terrible master but an excellent servant", author: "Phineas Taylor Barnum"),
+    Quote(text: "The time making money should be greater than the time that you are spending money", author: "Sophia Amoruso"),
+    Quote(text: "You only have so many hours in a day, let others make the money for you!", author: "Nick Haase"),
+    Quote(text: "Formal education will make you a living; self-education will make you a fortune", author: "Jim Rohn"),
+    Quote(text: "The longer you're not taking action the more you're losing money", author: "Carrie Wilkerson"),
+    Quote(text: "Expect the best. Prepare for the worst. Capitalize on what comes.", author: "Zig Ziglar"),
+    Quote(text: "Don't let money run your life, let money help you run your life better", author: "John Rampton"),
     Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
-    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
-    Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
-    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
-    Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
-    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
-    Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
-    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
-    Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
-    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
-    Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
-    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
-    Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
-    Quote(text: "No matter how long you live, heaven is till not assured", author: "Petasco"),
+    Quote(text: "Don't think money does everything or you are going to end up doing everything for money", author: "Voltaire"),
   ];
 
   Widget quoteTemplate(quote){
