@@ -34,8 +34,14 @@ class _QuoteListState extends State<QuoteList> {
     Quote(text: "The longer you're not taking action the more you're losing money", author: "Carrie Wilkerson"),
     Quote(text: "Expect the best. Prepare for the worst. Capitalize on what comes.", author: "Zig Ziglar"),
     Quote(text: "Don't let money run your life, let money help you run your life better", author: "John Rampton"),
-    Quote(text: "The truth is rarely pure and never simple", author: "Oscar Wild"),
+    Quote(text: "When you compete with others in life, you miss the chance to complete your own race with grace.", author: "Gift Gugu Mona"),
     Quote(text: "Don't think money does everything or you are going to end up doing everything for money", author: "Voltaire"),
+    Quote(text: "Life is a one-way trip with no return ticket. Always remember that you are in transit", author: "Gift Gugu Mona"),
+    Quote(text: "No matter the difficulties you face, do not be a difficult person. Choose to make life easy for others.", author: "Gift Gugu Mona"),
+    Quote(text: "Not everything will make sense in life; that does not mean you should accept nonsense", author: "Gift Gugu Mona"),
+    Quote(text: "Shortcuts can cut your life short. Avoid them at all costs", author: "Gift Gugu Mona"),
+    Quote(text: "Never let the tragedies of life transform you into a human tragedy.", author: "Gift Gugu Mona"),
+    Quote(text: "Sometimes life will make you smile, and other times it will make you frown. Life has its ups and downs. Yours is to make every day count.", author: "Gift Gugu Mona"),
   ];
 
   Widget quoteTemplate(quote){
