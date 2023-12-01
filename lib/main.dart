@@ -127,7 +127,10 @@ class _QuoteListState extends State<QuoteList> {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/contactme');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Contactme()),
+                  );
                 },
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
@@ -156,13 +159,13 @@ class _QuoteListState extends State<QuoteList> {
               backgroundColor: Colors.red,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Business',
+              icon: Icon(Icons.face_2_rounded),
+              label: 'Memes',
               backgroundColor: Colors.green,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              label: 'School',
+              icon: Icon(Icons.person_2_rounded),
+              label: 'Profile',
               backgroundColor: Colors.purple,
             ),
             BottomNavigationBarItem(
