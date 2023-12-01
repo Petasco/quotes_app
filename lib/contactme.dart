@@ -9,7 +9,7 @@ class Contactme extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text("Contact Developer"),
+        title: const Text("Contact Developer"),
         centerTitle: true,
         backgroundColor: Colors.deepOrange,
         elevation: 0.0,
