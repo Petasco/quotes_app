@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'qoute.dart';
 import 'quote_card.dart';
+import 'contactme.dart';
 
 void main() {
   runApp( const MaterialApp(
@@ -63,8 +64,38 @@ class _QuoteListState extends State<QuoteList> {
               return quoteTemplate(quote);
             }).toList(),
           ),
+          const Center(
+            child: Text("Designed By: Petasco",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          SizedBox(height: 20.0),
+          Center(
+            child: ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamed(context, '/contactme');
+              },
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.deepOrange)
+              ),
+              child: Text(
+                "Contact Me",
+                style: TextStyle(
+                  color: Colors.black87,
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 50.0),
         ],
-      )
+      ),
+
     );
   }
 }
