@@ -9,7 +9,7 @@ class Contactme extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text("Petasco ID App"),
+        title: Text("Contact Developer"),
         centerTitle: true,
         backgroundColor: Colors.deepOrange,
         elevation: 0.0,
@@ -20,17 +20,17 @@ class Contactme extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
 
           children: [
-            Center(
+            const Center(
               child: CircleAvatar(
                 backgroundImage: AssetImage("assets/bgprofile.png"),
                 radius: 40.0,
               ),
             ),
-            Divider(
+            const Divider(
               height: 60.0,
               color: Colors.deepOrange,
             ),
-            Text(
+            const Text(
               "NAME:",
               style: TextStyle(
                   color: Colors.grey,
@@ -39,7 +39,7 @@ class Contactme extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10.0),
-            Text(
+            const Text(
               "Diyouh Peter",
               style: TextStyle(
                 color: Colors.deepOrange,
@@ -50,7 +50,7 @@ class Contactme extends StatelessWidget {
             ),
             SizedBox(height: 30.0),
 
-            Text(
+            const Text(
               "DATE OF BIRTH:",
               style: TextStyle(
                   color: Colors.grey,
@@ -59,7 +59,7 @@ class Contactme extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10.0),
-            Text(
+            const Text(
               "25/12/2000",
               style: TextStyle(
                 color: Colors.deepOrange,
@@ -70,7 +70,7 @@ class Contactme extends StatelessWidget {
             ),
             SizedBox(height: 30.0),
 
-            Text(
+            const Text(
               "EDUCATION LEVEL:",
               style: TextStyle(
                   color: Colors.grey,
@@ -79,7 +79,7 @@ class Contactme extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10.0),
-            Text(
+            const Text(
               "University",
               style: TextStyle(
                 color: Colors.deepOrange,
@@ -90,7 +90,7 @@ class Contactme extends StatelessWidget {
             ),
             SizedBox(height: 30.0),
 
-            Text(
+            const Text(
               "UNIVERSITY LEVEL:",
               style: TextStyle(
                   color: Colors.grey,
@@ -99,7 +99,7 @@ class Contactme extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10.0),
-            Text(
+            const Text(
 
               "Five",
               style: TextStyle(
@@ -111,7 +111,7 @@ class Contactme extends StatelessWidget {
             ),
             SizedBox(height: 30.0),
 
-            Row(
+            const Row(
               children: [
                 Icon(
                   Icons.phone,
@@ -130,7 +130,7 @@ class Contactme extends StatelessWidget {
               ],
             ),
             SizedBox(height: 30.0),
-            Row(
+            const Row(
               children: [
                 Icon(
                   Icons.email,
@@ -157,7 +157,7 @@ class Contactme extends StatelessWidget {
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.deepOrange)
                 ),
-                child: Text(
+                child: const Text(
                   "Contact Me",
                   style: TextStyle(
                     color: Colors.black87,
