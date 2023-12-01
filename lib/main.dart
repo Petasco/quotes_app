@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'qoute.dart';
 import 'quote_card.dart';
 import 'contactme.dart';
+import 'memes.dart';
+import 'settings.dart';
+import 'profile.dart';
 
 void main() {
   runApp( const MaterialApp(
@@ -90,99 +93,111 @@ class _QuoteListState extends State<QuoteList> {
   Widget quoteTemplate(quote) {
     return QuoteCard(quote: quote);
   }
+  int selectedIndex = 0;
+  static const TextStyle optionStyle =
+  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> widgetOptions = <Widget>[
+    QuoteList(),
+    MemesLol(),
+    Profile(),
+    Settings(),
+  ];
 
-    @override
-    Widget build(BuildContext context) {
-      return Scaffold(
-        backgroundColor: Colors.grey,
-        appBar: AppBar(
-          title: const Text("Awesome Quotes App",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
+  void onItemTapped(int index) {
+    setState(() {
+      selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey,
+      appBar: AppBar(
+        title: const Text("Awesome Quotes App",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 18.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.red,
+      ),
+
+      body: ListView(
+        children: [
+          Column(
+            children: quotes.map((quote) {
+              return quoteTemplate(quote);
+            }).toList(),
+          ),
+          const Center(
+            child: Text("Designed By: Petasco",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
-          centerTitle: true,
-          backgroundColor: Colors.red,
-        ),
-
-        body: ListView(
-          children: [
-            Column(
-              children: quotes.map((quote) {
-                return quoteTemplate(quote);
-              }).toList(),
-            ),
-            const Center(
-              child: Text("Designed By: Petasco",
+          SizedBox(height: 20.0),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Contactme()),
+                );
+              },
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(
+                      Colors.deepOrange)
+              ),
+              child: const Text(
+                "Contact Me",
                 style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 15.0,
+                  color: Colors.black87,
+                  fontSize: 25.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            SizedBox(height: 20.0),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Contactme()),
-                  );
-                },
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        Colors.deepOrange)
-                ),
-                child: const Text(
-                  "Contact Me",
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 50.0),
-          ],
-        ),
+          ),
+          SizedBox(height: 50.0),
+        ],
+      ),
 
 
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-              backgroundColor: Colors.red,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.face_2_rounded),
-              label: 'Memes',
-              backgroundColor: Colors.green,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person_2_rounded),
-              label: 'Profile',
-              backgroundColor: Colors.purple,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Settings',
-              backgroundColor: Colors.pink,
-            ),
-          ],
-          /*
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
-          onTap: _onItemTapped,*/
-        ),
-      );
-    }
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.face_2_rounded),
+            label: 'Memes',
+            backgroundColor: Colors.green,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_2_rounded),
+            label: 'Profile',
+            backgroundColor: Colors.purple,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+            backgroundColor: Colors.pink,
+          ),
+        ],
+
+        currentIndex: selectedIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: onItemTapped,
+
+      ),
+    );
   }
-
-
-
-
+}
