@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.deepOrange,
         actions: [
           IconButton(
             icon: const Icon(Icons.settings, size: 25, color: Colors.black),
@@ -95,17 +95,17 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.face_2_rounded),
             label: 'Memes',
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.orange,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_2_rounded),
             label: 'Profile',
-            backgroundColor: Colors.purple,
+            backgroundColor: Colors.orange,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Settings',
-            backgroundColor: Colors.pink,
+            backgroundColor: Colors.orange,
           ),
         ],
         currentIndex: selectedIndex,

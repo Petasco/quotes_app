@@ -120,6 +120,7 @@ class _QuoteListState extends State<QuoteList> {
               return quoteTemplate(quote);
             }).toList(),
           ),
+
           const Center(
             child: Text("Designed By: Petasco",
               style: TextStyle(

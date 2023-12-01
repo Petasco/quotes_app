@@ -14,8 +14,26 @@ class Profile extends StatelessWidget {
         elevation: 0.0,
       ),
 
-      body: const Center(
-        child: Text('Welcome to the Profile page!'),
+      body: GridView.count(crossAxisCount: 2,
+        primary: false,
+        padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 50,
+        mainAxisSpacing: 50,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: BackButton(
+              onPressed: (){},
+            ),
+          ),
+
+          Container(
+            padding: const EdgeInsets.all(10),
+            child: BackButton(
+              onPressed: (){},
+            ),
+          ),
+        ],
       ),
 
 

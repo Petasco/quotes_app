@@ -2,33 +2,6 @@ import 'package:flutter/material.dart';
 
 class Settings extends StatelessWidget {
   const Settings({super.key});
-  /*
-  int selectedIndex = 0;
-
-  static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-
-  void onItemTapped(int index) {
-    setState(() {
-      selectedIndex = index;
-    });
-    // trying to see something
-
-    switch (selectedIndex) {
-      case 0:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => QuoteList()));
-        break;
-      case 1:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => MemesLol()));
-        break;
-      case 3:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Profile()));
-        break;
-      case 4:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
-        break;
-    }
-  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -41,40 +14,84 @@ class Settings extends StatelessWidget {
         elevation: 0.0,
       ),
 
-      body: const Center(
-        child: Text('Welcome to the Settings page!'),
+      body: const Center(child: Text('Settings')),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.deepOrange,
+              ),
+              child: Text('Settings'),
+            ),
+            ListTile(
+              title: const Text('Item 1'),
+              leading: const Icon(
+                Icons.alarm,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.message,
+              ),
+              title: const Text('Item 2'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Posts'),
+              leading: const Icon(
+                Icons.email,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Privacy Policy'),
+              leading: const Icon(
+                Icons.phone,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Security'),
+              leading: const Icon(
+                Icons.camera,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Logout'),
+              leading: const Icon(
+                Icons.watch,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Help & Support'),
+              leading: const Icon(
+                Icons.exit_to_app,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
       ),
 
-      /*
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.orange,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.face_2_rounded),
-            label: 'Memes',
-            backgroundColor: Colors.green,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_2_rounded),
-            label: 'Profile',
-            backgroundColor: Colors.purple,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-            backgroundColor: Colors.pink,
-          ),
-        ],
-
-        currentIndex: selectedIndex,
-        selectedItemColor: Colors.black,
-        onTap: onItemTapped,
-
-      ),*/
 
     );
   }
