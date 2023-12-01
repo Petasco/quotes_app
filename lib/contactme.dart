@@ -11,7 +11,7 @@ class Contactme extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Contact Developer"),
         centerTitle: true,
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.orange,
         elevation: 0.0,
       ),
       body: Padding(

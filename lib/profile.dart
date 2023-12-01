@@ -6,16 +6,16 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: const Text("Settings"),
+        title: const Text("Profile"),
         centerTitle: true,
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.orange,
         elevation: 0.0,
       ),
 
       body: const Center(
-        child: Text('Welcome to the Settings page!'),
+        child: Text('Welcome to the Profile page!'),
       ),
 
 
