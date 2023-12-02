@@ -62,12 +62,15 @@ class _HomePageState extends State<HomePage> {
           "Awesome Quotes App",
           style: TextStyle(
             color: Colors.black,
-            fontSize: 20.0,
+            fontSize: 28.0,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Elephant',
           ),
         ),
         centerTitle: true,
         backgroundColor: Colors.deepOrange,
+        // action tabs
+        /*
         actions: [
           IconButton(
             icon: const Icon(Icons.settings, size: 25, color: Colors.black),
@@ -82,7 +85,7 @@ class _HomePageState extends State<HomePage> {
               onItemTapped(1); // Navigate to MemesLol
             },
           )
-        ],
+        ], */
       ),
       body: selectedWidget(), // Show only the selected widget
       bottomNavigationBar: BottomNavigationBar(

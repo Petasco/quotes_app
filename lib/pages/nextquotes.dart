@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:quotes_app/home.dart';
 import 'package:quotes_app/memes.dart';
 import 'package:quotes_app/qoute.dart';
 import 'package:quotes_app/quote_card.dart';
 import 'package:quotes_app/contactme.dart';
-import 'package:quotes_app/pages/nextquotes.dart';
 
-class QuoteList extends StatefulWidget {
-  const QuoteList({super.key});
+class NextQuoteList extends StatefulWidget {
+  const NextQuoteList({super.key});
 
   @override
-  State<QuoteList> createState() => _QuoteListState();
+  State<NextQuoteList> createState() => _QuoteListState();
 }
 
 
 
-class _QuoteListState extends State<QuoteList> {
+class _QuoteListState extends State<NextQuoteList> {
   List<Quote> quotes = [
     Quote(
         text: "In war,to be a winner you chase. You don't run, so chasing your dreams makes you a winner and running away from failures makes you a loser",
         author: "Diyouh Peter"),
     Quote(
-        text: "It is so sad that you need have sense to know what is sensible",
-        author: "Petasco"),
+        text: "The secret of walking on water is knowing where the stones are.",
+        author: "Herb Cohen"),
     Quote(
         text: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
         author: "Albert Einstein"),
@@ -107,7 +107,7 @@ class _QuoteListState extends State<QuoteList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[50],
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text("Quotes",
           style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold, fontFamily: 'Georgia'),
@@ -128,20 +128,6 @@ class _QuoteListState extends State<QuoteList> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
               children: [
-                /*
-                Center(
-                  child: ElevatedButton.icon(
-                    onPressed: () {
-                      // Handle button press
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const MemesLol()),
-                      );
-                    },
-                    icon: Icon(Icons.navigate_before),
-                    label: Text('Previous'),
-                  ),
-                ), */
                 Center(
                   child: Container(
                     width: 130,
@@ -150,7 +136,23 @@ class _QuoteListState extends State<QuoteList> {
                         // Handle button press
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const NextQuoteList()),
+                          MaterialPageRoute(builder: (context) => const QuoteList()),
+                        );
+                      },
+                      icon: Icon(Icons.navigate_before),
+                      label: Text('Previous'),
+                    ),
+                  ),
+                ),
+                Center(
+                  child: Container(
+                    width: 130,
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        // Handle button press
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const MemesLol()),
                         );
                       },
                       icon: Icon(Icons.navigate_next),

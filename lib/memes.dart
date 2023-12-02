@@ -8,7 +8,7 @@ class MemesLol extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: const Text("Memes"),
+        title: const Text("Memes",style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Georgia'),),
         centerTitle: true,
         backgroundColor: Colors.orange,
         elevation: 0.0,

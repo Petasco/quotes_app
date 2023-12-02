@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'contactme.dart';
+
 class Settings extends StatelessWidget {
   const Settings({super.key});
 
@@ -8,7 +10,9 @@ class Settings extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: const Text("Settings"),
+        title: const Text("Settings",
+          style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Georgia'),
+        ),
         centerTitle: true,
         backgroundColor: Colors.orange,
         elevation: 0.0,
@@ -23,10 +27,16 @@ class Settings extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.deepOrange,
               ),
-              child: Text('Settings'),
+              child: Text('Settings',
+                style: TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
             ),
             ListTile(
-              title: const Text('Item 1'),
+              title: const Text('Account'),
               leading: const Icon(
                 Icons.alarm,
               ),
@@ -38,7 +48,7 @@ class Settings extends StatelessWidget {
               leading: const Icon(
                 Icons.message,
               ),
-              title: const Text('Item 2'),
+              title: const Text('Dark Theme'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -71,7 +81,7 @@ class Settings extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Logout'),
+              title: const Text('Help & Support'),
               leading: const Icon(
                 Icons.watch,
               ),
@@ -80,12 +90,35 @@ class Settings extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Help & Support'),
+              title: const Text('Logout'),
               leading: const Icon(
                 Icons.exit_to_app,
               ),
               onTap: () {
                 Navigator.pop(context);
+              },
+            ),
+            SizedBox(height: 50.0,),
+            ListTile(
+              title: const Text('By: Petasco'),
+              leading: const Icon(
+                Icons.developer_mode_rounded,
+              ),
+              trailing: IconButton(
+                icon: Icon(Icons.navigate_next),
+                onPressed: () {
+                  // Add your logic or navigation code here
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Contactme()),
+                  );
+                },
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Contactme()),
+                );
               },
             ),
           ],
