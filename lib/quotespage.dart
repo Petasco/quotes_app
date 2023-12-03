@@ -19,9 +19,6 @@ class _QuoteListState extends State<QuoteList> {
         text: "In war,to be a winner you chase. You don't run, so chasing your dreams makes you a winner and running away from failures makes you a loser",
         author: "Diyouh Peter"),
     Quote(
-        text: "It is so sad that you need have sense to know what is sensible",
-        author: "Petasco"),
-    Quote(
         text: "Life is like riding a bicycle. To keep your balance, you must keep moving.",
         author: "Albert Einstein"),
     Quote(
