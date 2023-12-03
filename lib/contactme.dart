@@ -197,6 +197,7 @@ class Contactme extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 50.0),
             ],
           ),
         ),
