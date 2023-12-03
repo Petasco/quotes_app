@@ -116,77 +116,79 @@ class _QuoteListState extends State<QuoteList> {
         elevation: 0.0,
       ),
 
-      body:  ListView(
-        children: [
-          Column(
-            children: quotes.map((quote) {
-              return quoteTemplate(quote);
-            }).toList(),
-          ),
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
-              children: [
-                /*
-                Center(
-                  child: ElevatedButton.icon(
-                    onPressed: () {
-                      // Handle button press
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const MemesLol()),
-                      );
-                    },
-                    icon: Icon(Icons.navigate_before),
-                    label: Text('Previous'),
-                  ),
-                ), */
-                Center(
-                  child: Container(
-                    width: 180,
+      body:  SafeArea(
+        child: ListView(
+          children: [
+            Column(
+              children: quotes.map((quote) {
+                return quoteTemplate(quote);
+              }).toList(),
+            ),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
+                children: [
+                  /*
+                  Center(
                     child: ElevatedButton.icon(
                       onPressed: () {
                         // Handle button press
-                        Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const NextQuoteList()),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const MemesLol()),
                         );
                       },
-                      label: Text('Next'),
-                      icon: Icon(Icons.navigate_next),
+                      icon: Icon(Icons.navigate_before),
+                      label: Text('Previous'),
+                    ),
+                  ), */
+                  Center(
+                    child: Container(
+                      width: 180,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          // Handle button press
+                          Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => const NextQuoteList()),
+                          );
+                        },
+                        label: Text('Next'),
+                        icon: Icon(Icons.navigate_next),
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),
-
-          SizedBox(height: 20.0),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Contactme()),
-                );
-              },
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                      Colors.orange),
-                  minimumSize: MaterialStateProperty.all(Size(300, 40))
-              ),
-
-              child: const Text(
-                "Contact Me",
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                ),
+                ],
               ),
             ),
-          ),
-          SizedBox(height: 50.0),
-        ],
+        
+            SizedBox(height: 20.0),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Contactme()),
+                  );
+                },
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        Colors.orange),
+                    minimumSize: MaterialStateProperty.all(Size(300, 40))
+                ),
+        
+                child: const Text(
+                  "Contact Me",
+                  style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 50.0),
+          ],
+        ),
       ),
 
 

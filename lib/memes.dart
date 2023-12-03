@@ -49,80 +49,82 @@ class _MemesLolState extends State<MemesLol> {
         ),
       ),
 
-      body:  ListView(
-        children: [
-          Column(
-            children: memes.map((meme) {
-              return quoteTemplate(meme);
-            }).toList(),
-          ),
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
-              children: [
-                Center(
-                  child: Container(
-                    width: 130,
-                    child: ElevatedButton.icon(
-                      onPressed: () {
-                        // Handle button press
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const QuoteList()),
-                        );
-                      },
-                      icon: Icon(Icons.navigate_before),
-                      label: Text('Previous'),
+      body:  SafeArea(
+        child: ListView(
+          children: [
+            Column(
+              children: memes.map((meme) {
+                return quoteTemplate(meme);
+              }).toList(),
+            ),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
+                children: [
+                  Center(
+                    child: Container(
+                      width: 130,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          // Handle button press
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const QuoteList()),
+                          );
+                        },
+                        icon: Icon(Icons.navigate_before),
+                        label: Text('Previous'),
+                      ),
                     ),
                   ),
-                ),
-                Center(
-                  child: Container(
-                    width: 130,
-                    child: ElevatedButton.icon(
-                      onPressed: () {
-                        // Handle button press
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const MemesLol()),
-                        );
-                      },
-                      icon: Icon(Icons.navigate_next),
-                      label: Text('Next'),
+                  Center(
+                    child: Container(
+                      width: 130,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          // Handle button press
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const MemesLol()),
+                          );
+                        },
+                        icon: Icon(Icons.navigate_next),
+                        label: Text('Next'),
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ),
-
-          SizedBox(height: 20.0),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Contactme()),
-                );
-              },
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                      Colors.orange),
-                  minimumSize: MaterialStateProperty.all(Size(300, 40))
-              ),
-
-              child: const Text(
-                "Contact Me",
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                ),
+                ],
               ),
             ),
-          ),
-          SizedBox(height: 50.0),
-        ],
+        
+            SizedBox(height: 20.0),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Contactme()),
+                  );
+                },
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                        Colors.orange),
+                    minimumSize: MaterialStateProperty.all(Size(300, 40))
+                ),
+        
+                child: const Text(
+                  "Contact Me",
+                  style: TextStyle(
+                    color: Colors.black87,
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 50.0),
+          ],
+        ),
       ),
 
 

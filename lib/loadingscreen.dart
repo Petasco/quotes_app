@@ -25,10 +25,12 @@ class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.blue,
-      body: Center(
-        child: SpinKitFadingCircle(
-          color: Colors.deepOrange,
-          size: 100.0,
+      body: SafeArea(
+        child: Center(
+          child: SpinKitFadingCircle(
+            color: Colors.deepOrange,
+            size: 100.0,
+          ),
         ),
       ),
     );

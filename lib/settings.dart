@@ -18,7 +18,7 @@ class Settings extends StatelessWidget {
         elevation: 0.0,
       ),
 
-      body: const Center(child: Text('Settings')),
+      body: SafeArea(child: const Center(child: Text('Settings'))),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
