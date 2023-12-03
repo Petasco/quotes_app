@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/home.dart';
+import 'package:quotes_app/Home.dart';
+import 'package:quotes_app/quotespage.dart';
 import 'package:quotes_app/memes.dart';
 import 'package:quotes_app/qoute.dart';
 import 'package:quotes_app/quote_card.dart';
 import 'package:quotes_app/contactme.dart';
+import 'package:quotes_app/main.dart';
 
 class NextQuoteList extends StatefulWidget {
   const NextQuoteList({super.key});
@@ -115,6 +117,24 @@ class _QuoteListState extends State<NextQuoteList> {
         centerTitle: true,
         backgroundColor: Colors.orange,
         elevation: 0.0,
+
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.home, size: 25, color: Colors.black),
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/home',
+                //MaterialPageRoute(builder: (context) => const HomePage()),
+             );
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.navigate_next_rounded,
+                size: 45, color: Colors.black),
+            onPressed: () {
+              //onItemTapped(1); // Navigate to MemesLol
+            },
+          )
+        ],
       ),
 
       body:  ListView(
@@ -128,31 +148,32 @@ class _QuoteListState extends State<NextQuoteList> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
               children: [
+                /*
                 Center(
                   child: Container(
                     width: 130,
                     child: ElevatedButton.icon(
                       onPressed: () {
                         // Handle button press
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const QuoteList()),
+                        Navigator.pushReplacementNamed(
+                          context,'/first-quotes'
+                          // MaterialPageRoute(builder: (context) => const QuoteList()),
                         );
                       },
                       icon: Icon(Icons.navigate_before),
                       label: Text('Previous'),
                     ),
                   ),
-                ),
+                ),*/
                 Center(
                   child: Container(
-                    width: 130,
+                    width: 180,
                     child: ElevatedButton.icon(
                       onPressed: () {
                         // Handle button press
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const MemesLol()),
+                        Navigator.pushReplacementNamed(
+                          context, '/second-quotes'
+                          //MaterialPageRoute(builder: (context) => const MemesLol()),
                         );
                       },
                       icon: Icon(Icons.navigate_next),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/qoute.dart';
 
-class QuoteCard extends StatelessWidget {
-  final Quote quote;
-  const QuoteCard({super.key, required this.quote});
+class MemeCard extends StatelessWidget {
+  final Meme meme;
+  const MemeCard({super.key, required this.meme});
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -13,7 +13,7 @@ class QuoteCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(quote.text,
+            Text(meme.text,
               style: const TextStyle(
                 fontSize: 18.0,
                 color: Colors.black87,
@@ -22,7 +22,7 @@ class QuoteCard extends StatelessWidget {
             const SizedBox(height: 15.0),
 
             Center(
-              child: Text(quote.author,
+              child: Text(meme.author,
                 style: const TextStyle(
                   fontSize: 18.0,
                   color: Colors.deepOrange,

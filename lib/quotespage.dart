@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/memes.dart';
 import 'package:quotes_app/qoute.dart';
 import 'package:quotes_app/quote_card.dart';
 import 'package:quotes_app/contactme.dart';
@@ -144,17 +143,16 @@ class _QuoteListState extends State<QuoteList> {
                 ), */
                 Center(
                   child: Container(
-                    width: 130,
+                    width: 180,
                     child: ElevatedButton.icon(
                       onPressed: () {
                         // Handle button press
-                        Navigator.push(
-                          context,
+                        Navigator.push(context,
                           MaterialPageRoute(builder: (context) => const NextQuoteList()),
                         );
                       },
-                      icon: Icon(Icons.navigate_next),
                       label: Text('Next'),
+                      icon: Icon(Icons.navigate_next),
                     ),
                   ),
                 ),
