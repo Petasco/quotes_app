@@ -97,31 +97,7 @@ class _MemesLolState extends State<MemesLol> {
               ),
             ),
         
-            SizedBox(height: 20.0),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Contactme()),
-                  );
-                },
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        Colors.orange),
-                    minimumSize: MaterialStateProperty.all(Size(300, 40))
-                ),
-        
-                child: const Text(
-                  "Contact Me",
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
+
             SizedBox(height: 50.0),
           ],
         ),
