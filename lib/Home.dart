@@ -74,6 +74,10 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
         backgroundColor: Colors.deepOrange,
+        bottom: const PreferredSize(
+          preferredSize: Size.zero,
+          child: Text("by Petasco", style: TextStyle(color: Colors.black),),
+        ),
         // action tabs
         /*
         actions: [
