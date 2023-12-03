@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/qoute.dart';
 import 'package:quotes_app/quote_card.dart';
-import 'package:quotes_app/contactme.dart';
 import 'package:quotes_app/pages/nextquotes.dart';
 
 class QuoteList extends StatefulWidget {
