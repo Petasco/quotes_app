@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text(
-          "Awesome Quotes App",
+          "Awesome Memes App",
           style: TextStyle(
             color: Colors.black,
             fontSize: 28.0,
@@ -76,10 +76,10 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.deepOrange,
         bottom: const PreferredSize(
           preferredSize: Size.zero,
-          child: Text("by Petasco", style: TextStyle(color: Colors.black),),
+          child: Text("Allow memes to take away your Stress", style: TextStyle(color: Colors.black),),
         ),
         // action tabs
-        /*
+
         actions: [
           IconButton(
             icon: const Icon(Icons.settings, size: 25, color: Colors.black),
@@ -88,13 +88,13 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.navigate_next_rounded,
-                size: 45, color: Colors.black),
+            icon: const Icon(Icons.circle_notifications,
+                size: 25, color: Colors.black),
             onPressed: () {
               onItemTapped(1); // Navigate to MemesLol
             },
           )
-        ], */
+        ],
       ),
       body: selectedWidget(), // Show only the selected widget
       bottomNavigationBar: BottomNavigationBar(

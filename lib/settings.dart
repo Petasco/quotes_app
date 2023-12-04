@@ -63,18 +63,18 @@ class Settings extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Privacy Policy'),
+              title: const Text('Share'),
               leading: const Icon(
-                Icons.phone,
+                Icons.share,
               ),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('Security'),
+              title: const Text('Rate Us'),
               leading: const Icon(
-                Icons.camera,
+                Icons.favorite,
               ),
               onTap: () {
                 Navigator.pop(context);
@@ -93,6 +93,15 @@ class Settings extends StatelessWidget {
               title: const Text('Logout'),
               leading: const Icon(
                 Icons.exit_to_app,
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('About'),
+              leading: const Icon(
+                Icons.question_mark_rounded,
               ),
               onTap: () {
                 Navigator.pop(context);
