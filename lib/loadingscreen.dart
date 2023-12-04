@@ -16,7 +16,7 @@ class _LoadingState extends State<Loading> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 5), () {
       loadHomePage(context);
     });
   }
