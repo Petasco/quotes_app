@@ -69,7 +69,7 @@ class _MemesLolState extends State<MemesLol> {
     Meme(text: "The Meaning of Marriage\n\nWife: if you were my husband, I'd poison your coffee.\nMan: If you were my wife,I'd gladly drink it!\n"
         "Marriage is the only war where you sleep with your enemy",
         author: "Unknown"),
-    Meme(text: "Chemist: Do you know why oil fry things and water boil yhings? I won't tell, because you saw Chemistry and went ahead to to study"
+    Meme(text: "Chemist: Do you know why oil fry things and water boil things? I won't tell, because you saw Chemistry and went ahead to to study"
         " Economics. \nEconomist: Do you know why a country has a money printing machine but yet borrow money from other countries? I won't tell you "
         "because you saw Economics but went for Chemistry",
         author: "Unknown"),
