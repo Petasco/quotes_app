@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text(
-          "Awesome Memes App",
+          "Memes App",
           style: TextStyle(
             color: Colors.black,
             fontSize: 28.0,
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
             fontFamily: 'Elephant',
           ),
         ),
-        centerTitle: true,
+        //centerTitle: true,
         backgroundColor: Colors.deepOrange,
         bottom: const PreferredSize(
           preferredSize: Size.zero,
