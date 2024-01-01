@@ -109,13 +109,13 @@ class _QuoteListState extends State<NextQuoteList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text("Quotes",
           style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold, fontFamily: 'Georgia'),
         ),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.red,
         elevation: 0.0,
 
         actions: [
@@ -144,6 +144,16 @@ class _QuoteListState extends State<NextQuoteList> {
               children: quotes.map((quote) {
                 return quoteTemplate(quote);
               }).toList(),
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text("2 of 5",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                )
+              ],
             ),
             Center(
               child: Row(
@@ -186,32 +196,9 @@ class _QuoteListState extends State<NextQuoteList> {
               ),
             ),
         
-            SizedBox(height: 20.0),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Contactme()),
-                  );
-                },
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                        Colors.orange),
-                    minimumSize: MaterialStateProperty.all(Size(300, 40))
-                ),
-        
-                child: const Text(
-                  "Contact Me",
-                  style: TextStyle(
-                    color: Colors.black87,
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 50.0),
+            const SizedBox(height: 20.0),
+
+            const SizedBox(height: 50.0),
           ],
         ),
       ),

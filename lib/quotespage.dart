@@ -102,13 +102,13 @@ class _QuoteListState extends State<QuoteList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[50],
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text("Quotes",
           style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold, fontFamily: 'Georgia'),
         ),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.red,
         elevation: 0.0,
       ),
 
@@ -119,6 +119,16 @@ class _QuoteListState extends State<QuoteList> {
               children: quotes.map((quote) {
                 return quoteTemplate(quote);
               }).toList(),
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text("1 of 5",
+                  style: TextStyle(fontSize: 18),
+                  ),
+                )
+              ],
             ),
             Center(
               child: Row(
@@ -148,15 +158,15 @@ class _QuoteListState extends State<QuoteList> {
                             MaterialPageRoute(builder: (context) => const NextQuoteList()),
                           );
                         },
-                        label: Text('Next'),
-                        icon: Icon(Icons.navigate_next),
+                        label: const Text('Next'),
+                        icon: const Icon(Icons.navigate_next),
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 50.0),
+            const SizedBox(height: 50.0),
           ],
         ),
       ),

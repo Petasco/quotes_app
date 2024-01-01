@@ -14,11 +14,11 @@ class Settings extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Georgia'),
         ),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.red,
         elevation: 0.0,
       ),
 
-      body: SafeArea(child: const Center(child: Text('Settings'))),
+      body: const SafeArea(child: Center(child: Text('Settings'))),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -54,7 +54,7 @@ class Settings extends StatelessWidget {
               },
             ),
             ListTile(
-              title: const Text('Posts'),
+              title: const Text('Donate'),
               leading: const Icon(
                 Icons.email,
               ),

@@ -4,18 +4,7 @@ import 'memes.dart';
 import 'settings.dart';
 import 'profile.dart';
 import 'quotespage.dart';
-/*
-void main() {
-  runApp( const MaterialApp(
-    home: HomePage(),
 
-    initialRoute: '/',
-    routes: {
-      // '/homepage' : (context) => const HomePage(),
-    },
-  ));
-}
-*/
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -73,7 +62,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         //centerTitle: true,
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.grey,
         bottom: const PreferredSize(
           preferredSize: Size.zero,
           child: Text("Allow memes to take away your Stress", style: TextStyle(color: Colors.black),),
@@ -102,22 +91,22 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.face_2_rounded),
             label: 'Memes',
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_2_rounded),
             label: 'Profile',
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             label: 'Settings',
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.red,
           ),
         ],
         currentIndex: selectedIndex,

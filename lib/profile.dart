@@ -12,14 +12,14 @@ class Profile extends StatelessWidget {
         style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Georgia'),
         ),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.red,
         elevation: 0.0,
       ),
 
       body:  SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+            padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
 

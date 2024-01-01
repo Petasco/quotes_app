@@ -112,7 +112,7 @@ class _MemesLolState extends State<MemesLol> {
         style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold, fontFamily: 'Georgia'),
         ),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.red,
         elevation: 0.0,
       ),
 
