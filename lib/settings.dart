@@ -23,22 +23,25 @@ class Settings extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.deepOrange,
-              ),
-              child: Text('Settings',
-                style: TextStyle(
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+            const SizedBox(
+              height: 80,
+              child: DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.deepOrange,
+                ),
+                child: Text('Settings',
+                  style: TextStyle(
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
             ListTile(
               title: const Text('Account'),
               leading: const Icon(
-                Icons.alarm,
+                Icons.account_box_rounded,
               ),
               onTap: () {
                 Navigator.pop(context);
