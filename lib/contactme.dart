@@ -16,7 +16,7 @@ class Contactme extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+          padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
         
@@ -39,7 +39,7 @@ class Contactme extends StatelessWidget {
                     letterSpacing: 2.0
                 ),
               ),
-              SizedBox(height: 10.0),
+              const SizedBox(height: 10.0),
               const Text(
                 "Diyouh Peter",
                 style: TextStyle(
