@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text(
-          "Memes App",
+          "Memes",
           style: TextStyle(
             color: Colors.black,
             fontSize: 28.0,
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.grey,
         bottom: const PreferredSize(
           preferredSize: Size.zero,
-          child: Text("Allow memes to take away your Stress", style: TextStyle(color: Colors.black),),
+          child: Text("Allow memes to take away your Stress", style: TextStyle(color: Colors.white),),
         ),
         // action tabs
 
