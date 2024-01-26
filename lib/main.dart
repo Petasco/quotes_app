@@ -13,13 +13,13 @@ void main() {
     //home: HomePage(),
     initialRoute: '/',
     routes: {
-      '/': (context) => Loading(),
+      '/': (context) => const Loading(),
       '/home': (context) => const HomePage(),
       '/first-quotes': (context) => const QuoteList(),
       '/second-quotes': (context) => const NextQuoteList(),
       '/memes-page': (context) => const MemesLol(),
       '/settings-page': (context) => const Settings(),
-      '/profile-page': (context) => const Profile(),
+      '/profile-page': (context) =>  const ProfileSettingsPage(),
     },
   ));
 }

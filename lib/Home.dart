@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'auth/login.dart';
 import 'quote_card.dart';
 import 'memes.dart';
 import 'settings.dart';
@@ -41,9 +42,11 @@ class _HomePageState extends State<HomePage> {
         case 1:
           return const MemesLol();
         case 2:
-          return const Profile();
+          return const ProfileSettingsPage();
         case 3:
           return const Settings();
+        case 4:
+          return const LoginPageUI();
         default:
           return Container(); // Handle any other case if needed
       }
@@ -65,7 +68,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.grey,
         bottom: const PreferredSize(
           preferredSize: Size.zero,
-          child: Text("Allow memes to take away your Stress", style: TextStyle(color: Colors.white),),
+          child: Text("Allow memes to take away your Stress", style: TextStyle(color: Colors.red),),
         ),
         // action tabs
 
@@ -80,7 +83,7 @@ class _HomePageState extends State<HomePage> {
             icon: const Icon(Icons.circle_notifications,
                 size: 25, color: Colors.black),
             onPressed: () {
-              onItemTapped(1); // Navigate to MemesLol
+              onItemTapped(4); // Navigate to MemesLol
             },
           )
         ],

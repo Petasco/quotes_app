@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quotes_app/auth/Signup.dart';
 import 'package:quotes_app/qoute.dart';
 import 'package:quotes_app/quote_card.dart';
 import 'package:quotes_app/pages/nextquotes.dart';
@@ -134,20 +135,20 @@ class _QuoteListState extends State<QuoteList> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
                 children: [
-                  /*
+
                   Center(
                     child: ElevatedButton.icon(
                       onPressed: () {
                         // Handle button press
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const MemesLol()),
+                          MaterialPageRoute(builder: (context) => const SignupPageUI()),
                         );
                       },
-                      icon: Icon(Icons.navigate_before),
-                      label: Text('Previous'),
+                      icon: const Icon(Icons.navigate_before),
+                      label: const Text('Previous'),
                     ),
-                  ), */
+                  ),
                   Center(
                     child: Container(
                       width: 180,
