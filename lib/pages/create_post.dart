@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class CreateChannelScreen extends StatefulWidget {
-  const CreateChannelScreen({super.key});
+class CreatePostScreen extends StatefulWidget {
+  const CreatePostScreen({super.key});
 
   @override
-  _CreateChannelWidgetState createState() => _CreateChannelWidgetState();
+  _CreatePostScreenState createState() => _CreatePostScreenState();
 }
 
-class _CreateChannelWidgetState extends State<CreateChannelScreen> {
+class _CreatePostScreenState extends State<CreatePostScreen> {
   String selectedCategory = 'Memes';
   TextEditingController channelNameController = TextEditingController();
   TextEditingController pictureController = TextEditingController();
