@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'auth/login.dart';
 import 'quote_card.dart';
-import 'memes.dart';
-import 'settings.dart';
-import 'profile.dart';
-import 'quotespage.dart';
+import 'tabs/memes.dart';
+import 'tabs/settings.dart';
+import 'tabs/profile.dart';
+import 'tabs/quotespage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.grey,
         bottom: const PreferredSize(
           preferredSize: Size.zero,
-          child: Text("Allow memes to take away your Stress", style: TextStyle(color: Colors.red),),
+          child: Text("Allow memes to take away your Stress", style: TextStyle(color: Colors.white),),
         ),
         // action tabs
 
@@ -88,7 +88,13 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: selectedWidget(), // Show only the selected widget
+      body: Stack(
+        children: [
+          backgroundImage(context),
+          selectedWidget(), // Show only the selected widget
+        ],
+
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -118,4 +124,14 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+Widget backgroundImage(BuildContext context) {
+  return SizedBox(
+    height: MediaQuery.of(context).size.height,
+    child: Image.asset(
+      'assets/bg_image.jpg',
+      fit: BoxFit.fitHeight,
+    ),
+  );
 }

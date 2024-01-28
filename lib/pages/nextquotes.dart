@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_app/Home.dart';
-import 'package:quotes_app/quotespage.dart';
-import 'package:quotes_app/memes.dart';
+import 'package:quotes_app/tabs/quotespage.dart';
+import 'package:quotes_app/tabs/memes.dart';
 import 'package:quotes_app/qoute.dart';
 import 'package:quotes_app/quote_card.dart';
 import 'package:quotes_app/contactme.dart';

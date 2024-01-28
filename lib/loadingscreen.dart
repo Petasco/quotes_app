@@ -10,7 +10,8 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   void loadHomePage(BuildContext context) {
-    Navigator.pushReplacementNamed(context, '/home');
+    //Navigator.pushReplacementNamed(context, '/home');
+    Navigator.pushReplacementNamed(context, '/register-page');
   }
 
   @override

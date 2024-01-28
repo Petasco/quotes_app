@@ -1,11 +1,13 @@
+
 import 'package:flutter/material.dart';
 import 'package:quotes_app/pages/nextquotes.dart';
 import 'Home.dart';
+import 'auth/Signup.dart';
 import 'loadingscreen.dart';
-import 'memes.dart';
-import 'settings.dart';
-import 'profile.dart';
-import 'quotespage.dart';
+import 'tabs/memes.dart';
+import 'tabs/settings.dart';
+import 'tabs/profile.dart';
+import 'tabs/quotespage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -20,6 +22,7 @@ void main() {
       '/memes-page': (context) => const MemesLol(),
       '/settings-page': (context) => const Settings(),
       '/profile-page': (context) =>  const ProfileSettingsPage(),
+      '/register-page': (context) => const SignupPageUI(),
     },
   ));
 }

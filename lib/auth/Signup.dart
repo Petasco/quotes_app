@@ -131,10 +131,7 @@ class _SignupPageState extends State<SignupPageUI> {
                                     splashColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () {
-                                      HapticFeedback.lightImpact();
-                                      Fluttertoast.showToast(
-                                        msg: 'Sign-In button pressed',
-                                      );
+                                      Navigator.pushReplacementNamed(context, '/home');
                                     },
                                     child: Container(
                                       margin: EdgeInsets.only(

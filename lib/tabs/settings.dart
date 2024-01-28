@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'contactme.dart';
+import '../contactme.dart';
 
 class Settings extends StatelessWidget {
   const Settings({super.key});

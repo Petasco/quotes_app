@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotes_app/quotespage.dart';
+import 'package:quotes_app/tabs/quotespage.dart';
 import 'package:quotes_app/qoute.dart';
 import 'package:quotes_app/pages/MemeCard.dart';
 
@@ -116,63 +116,76 @@ class _MemesLolState extends State<MemesLol> {
         elevation: 0.0,
       ),
 
-      body:  SafeArea(
-        child: ListView(
-          children: [
-            Column(
-              children: memes.map((meme) {
-                return quoteTemplate(meme);
-              }).toList(),
-            ),
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
-                children: [
-                  Center(
-                    child: Container(
-                      width: 130,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          // Handle button press
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const QuoteList()),
-                          );
-                        },
-                        icon: Icon(Icons.navigate_before),
-                        label: Text('Previous'),
+      body:  Stack(
+        children: [
+          backgroundImage(context),
+          SafeArea(
+            child: ListView(
+              children: [
+                Column(
+                  children: memes.map((meme) {
+                    return quoteTemplate(meme);
+                  }).toList(),
+                ),
+                Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
+                    children: [
+                      Center(
+                        child: Container(
+                          width: 130,
+                          child: ElevatedButton.icon(
+                            onPressed: () {
+                              // Handle button press
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const QuoteList()),
+                              );
+                            },
+                            icon: Icon(Icons.navigate_before),
+                            label: Text('Previous'),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  Center(
-                    child: Container(
-                      width: 130,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          // Handle button press
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const MemesLol()),
-                          );
-                        },
-                        icon: Icon(Icons.navigate_next),
-                        label: Text('Next'),
+                      Center(
+                        child: Container(
+                          width: 130,
+                          child: ElevatedButton.icon(
+                            onPressed: () {
+                              // Handle button press
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const MemesLol()),
+                              );
+                            },
+                            icon: Icon(Icons.navigate_next),
+                            label: Text('Next'),
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
-              ),
-            ),
-        
+                ),
 
-            SizedBox(height: 50.0),
-          ],
-        ),
+
+                SizedBox(height: 50.0),
+              ],
+            ),
+          )
+        ],
+
       ),
-
-
-
 
     );
   }
+}
+
+Widget backgroundImage(BuildContext context) {
+  return SizedBox(
+    height: MediaQuery.of(context).size.height,
+    child: Image.asset(
+      'assets/bg_image.jpg',
+      fit: BoxFit.fitHeight,
+    ),
+  );
 }

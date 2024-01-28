@@ -113,68 +113,81 @@ class _QuoteListState extends State<QuoteList> {
         elevation: 0.0,
       ),
 
-      body:  SafeArea(
-        child: ListView(
-          children: [
-            Column(
-              children: quotes.map((quote) {
-                return quoteTemplate(quote);
-              }).toList(),
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+      body:  Stack(
+        children: [
+          backgroundImage(context),
+          SafeArea(
+            child: ListView(
               children: [
+                Column(
+                  children: quotes.map((quote) {
+                    return quoteTemplate(quote);
+                  }).toList(),
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(
+                      child: Text("1 of 5",
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    )
+                  ],
+                ),
                 Center(
-                  child: Text("1 of 5",
-                  style: TextStyle(fontSize: 18),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
+                    children: [
+
+                      Center(
+                        child: ElevatedButton.icon(
+                          onPressed: () {
+                            // Handle button press
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const SignupPageUI()),
+                            );
+                          },
+                          icon: const Icon(Icons.navigate_before),
+                          label: const Text('Previous'),
+                        ),
+                      ),
+                      Center(
+                        child: Container(
+                          width: 180,
+                          child: ElevatedButton.icon(
+                            onPressed: () {
+                              // Handle button press
+                              Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => const NextQuoteList()),
+                              );
+                            },
+                            label: const Text('Next'),
+                            icon: const Icon(Icons.navigate_next),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                )
+                ),
+                const SizedBox(height: 50.0),
               ],
             ),
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust as needed
-                children: [
-
-                  Center(
-                    child: ElevatedButton.icon(
-                      onPressed: () {
-                        // Handle button press
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const SignupPageUI()),
-                        );
-                      },
-                      icon: const Icon(Icons.navigate_before),
-                      label: const Text('Previous'),
-                    ),
-                  ),
-                  Center(
-                    child: Container(
-                      width: 180,
-                      child: ElevatedButton.icon(
-                        onPressed: () {
-                          // Handle button press
-                          Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => const NextQuoteList()),
-                          );
-                        },
-                        label: const Text('Next'),
-                        icon: const Icon(Icons.navigate_next),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 50.0),
-          ],
-        ),
+          ),
+        ],
       ),
-
-
-
 
     );
   }
+}
+
+
+Widget backgroundImage(BuildContext context) {
+  return SizedBox(
+    height: MediaQuery.of(context).size.height,
+    child: Image.asset(
+      'assets/bg_image.jpg',
+      fit: BoxFit.fitHeight,
+    ),
+  );
 }
