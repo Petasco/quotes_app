@@ -7,7 +7,11 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'Signup.dart';
 
 class LoginPageUI extends StatefulWidget {
-  const LoginPageUI({super.key});
+  LoginPageUI({Key? key}) : super(key: key);
+
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   _LoginPageUIState createState() => _LoginPageUIState();
