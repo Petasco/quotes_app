@@ -35,11 +35,6 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        TextFormField(
-          controller: channelNameController,
-          decoration: const InputDecoration(labelText: 'Channel Name'),
-        ),
-        const SizedBox(height: 16.0),
         DropdownButtonFormField<String>(
           value: selectedCategory,
           onChanged: (String? value) {
@@ -55,6 +50,14 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
           }).toList(),
           decoration: const InputDecoration(labelText: 'Category'),
         ),
+        const SizedBox(height: 16.0),
+        TextFormField(
+          maxLines: 5,
+          maxLength: 1000,
+          controller: channelNameController,
+          decoration: const InputDecoration(labelText: 'Create Post Here...'),
+        ),
+
         const SizedBox(height: 50.0),
 
 
