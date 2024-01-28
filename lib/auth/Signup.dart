@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
+import '../pages/create_post.dart';
 import 'login.dart';
 
 class SignupPageUI extends StatefulWidget {
@@ -101,11 +102,16 @@ class _SignupPageState extends State<SignupPageUI> {
                                           ),
                                           recognizer: TapGestureRecognizer()
                                             ..onTap = () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(builder: (context) => const CreatePostScreen()),
+                                              );
+                                            /*
                                               HapticFeedback.lightImpact();
                                               Fluttertoast.showToast(
                                                 msg:
                                                 'Forgotten password! button pressed',
-                                              );
+                                              );*/
                                             },
                                         ),
                                       ),
